@@ -19,6 +19,3 @@ app.get("/todoList", (req, res) => {
 app.listen(5000, () => {
   console.log("listening on Port 5000");
 });
-
-/* Vercel 123*/
-// MongoUrl = mongodb+srv://MernVercel:Vercel 123@cluster0.35ayfbj.mongodb.net/?retryWrites=true&w=majority
