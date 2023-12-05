@@ -5,15 +5,18 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.post("/todoList", (req, res) => {
-  const NewData = Api;
-  NewData.push({
-    Name: req.body.Name,
+app.post("/Login", (req, res) => {
+  const NewList = Api;
+
+  NewList.push({
+    email: req.body.email,
+    password: req.body.password,
   });
+  res.json(NewList);
 });
 
-app.get("/todoList", (req, res) => {
-  res.json({ Api });
+app.get("/Login", (req, res) => {
+  res.json(Api);
 });
 
 app.listen(5000, () => {
